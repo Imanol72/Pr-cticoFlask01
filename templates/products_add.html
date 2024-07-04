@@ -1,0 +1,22 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+Agregar producto
+{% endblock %}
+
+{% block body %}
+    <form action="" method="post">
+        <label for="">Marca</label>
+        <input type="text" name="brand_motherboard">
+
+        <label for="">Modelo</label>
+        <input type="text" name="model_motherboard">
+
+        <label for="">Precio</label>
+        <input type="number" name="price_motherboard">
+
+        <button type="submit">Agregar</button>
+        <a href="/products" class="btn btn-info">Volver</a>
+    </form>
+
+{% endblock %}

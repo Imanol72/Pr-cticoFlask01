@@ -1,0 +1,29 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+PRODUCTS
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col">
+        <a href="/products_add" class="btn btn-info">Agregar Producto</a>
+    </div>
+</div>
+<table class="table">Products
+    <thead>
+        <tr>
+            <td>Marca</td>
+            <td>Modelo</td>
+            <td>Precio</td>
+        </tr>
+    </thead>
+    {% for motherboard in motherboards.motherboards %}
+    <tr>
+        <td>{{motherboard.brand}}</td>
+        <td>{{motherboard.model}}</td>
+        <td>{{motherboard.price}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
